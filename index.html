@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <title>My Demo</title>
+        
+        <script src="https://cesium.com/downloads/cesiumjs/releases/1.86.1/Build/Cesium/Cesium.js"></script>
+        <link href="https://cesium.com/downloads/cesiumjs/releases/1.86.1/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+        
+        <link rel="stylesheet" href="index.css" media="screen">
+    </head>
+    <body>
+        <div id="cesiumContainer"></div>
+        <div class="backdrop" id="menu">
+            
+            <span><strong>CITY</strong></span>
+            <div class="nowrap">
+                <select id="tileStyle">
+                    <option value="none">None</option>
+                    <option value="london">London</option>
+                    <option value="colombo">Colombo</option>
+                </select>
+            </div>
+            <br>
+        </div>
+        <div id="loadingIndicator" class="cover">
+            <div id="loadingIcon" class="loadingIndicator"></div>
+        </div>
+
+
+        <script src="Source/App.js"></script>
+
+    </body>
+</html>
