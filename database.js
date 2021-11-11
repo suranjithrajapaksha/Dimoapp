@@ -8,9 +8,9 @@ app.get("/", function(request,response){
 });
 
 var db = mysql.createConnection({
-    host:'localhost',
+    host:'mysql',
     user:'root',
-    password:'',
+    password:'Suranjith6@',
     database:'location'
 });
 
