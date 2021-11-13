@@ -8,18 +8,20 @@ services:
         volumes:
             - .:/app
             - '/app/node_modules'
+
+        expose:
+           - '8080'
     database:
         image: mysql:5.7
         container_name: mysql
         restart: always
         environment:
-            - MYSQL_PASSWORD=Suranith
-            - MySQL_ROOT_PASSWORD=Suranjith6@
-            - MYSQL_USER=root
-            - DB_NAME=location
+            - MYSQL_ROOT_PASSWORD=Suranjith
+            - MYSQL_ROOT_HOST=%
         ports:
             - '3366:3306'
         expose:
             - '3306'
 
-      
+        volumes:         
+            - /:/var/lib/mysql
