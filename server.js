@@ -10,9 +10,9 @@
     const cookieParser = require('cookie-parser');
 
     var con = mysql.createConnection({
-        host: "localhost",
+        host: "database",
         user: "root",
-        password: "",
+        password: "Suranjith",
         database: "location"
     });
     let databaseOutput;
@@ -155,7 +155,7 @@
         });
     });
 
-    var server = app.listen(argv.port, argv.public ? undefined : 'localhost', function() {
+    var server = app.listen(argv.port,'0.0.0.0' ? undefined : '0.0.0.0', function() {
         if (argv.public) {
             console.log('Cesium development server running publicly.  Connect to http://localhost:%d/', server.address().port);
         } else {
